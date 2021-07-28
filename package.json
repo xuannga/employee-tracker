@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "espress": "^0.0.0",
+    "mysql2": "^2.2.5"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "employee-tracker",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuannga/employee-tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xuannga/employee-tracker/issues"
+  },
+  "homepage": "https://github.com/xuannga/employee-tracker#readme"
+}
