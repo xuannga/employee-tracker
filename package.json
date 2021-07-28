@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "console.table": "^0.10.0",
     "espress": "^0.0.0",
+    "inquirer": "^8.1.2",
     "mysql2": "^2.2.5"
   },
   "scripts": {
@@ -10,7 +12,6 @@
   "description": "",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xuannga/employee-tracker.git"
