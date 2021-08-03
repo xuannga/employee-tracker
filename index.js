@@ -3,6 +3,8 @@ const inquirer = require('inquirer');
 const mysql = require('mysql2');
 const cTable = require('console.table');
 
+initApp();
+
 function initApp() {
     runPrompts();
 }
@@ -43,7 +45,7 @@ function runPrompts() {
             },
             {
                 name: "Quit",
-                value: "QUITE"
+                value: "QUIT"
             }
         ]
     }]).then(response => {
@@ -111,7 +113,6 @@ function createRole() {
     db.allDepart()
         .then(([rows]) => {
             let departments = rows;
-            const departChoices = rows;
             const departChoices = departments.map(({ id, name }) => ({
                 name: name,
                 value: id
