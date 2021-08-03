@@ -1,7 +1,8 @@
-const inquirer = require('inquirer');
-// Import and require mysql2
-const mysql = require('mysql2');
-const cTable = require('console.table');
+const { prompt } = require("inquirer");
+const db = require("./db")
+    // Import and require mysql2
+    // const mysql = require('mysql2');
+require("console.table");
 
 initApp();
 
@@ -10,10 +11,11 @@ function initApp() {
 }
 
 function runPrompts() {
+
     prompt([{
         //prompts to load when npm start
         type: "list",
-        name: "options",
+        name: "choice",
         message: "What do you want to to?",
         choices: [{
                 name: "View ALL Departments",
@@ -48,8 +50,8 @@ function runPrompts() {
                 value: "QUIT"
             }
         ]
-    }]).then(response => {
-        let choice = response.options;
+    }]).then(res => {
+        let choice = res.choices;
         switch (choice) {
             case "VIEW_DEPARTMENTS":
                 viewAllDepart();
@@ -251,7 +253,7 @@ function updateEmployeeRole() {
             });
         })
 }
-//quit
-function quit() {
-    process.exit();
-}
+// //quit
+// function quit() {
+//     process.exit();
+// }

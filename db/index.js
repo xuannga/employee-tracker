@@ -1,6 +1,7 @@
 const connect = require("./connection");
 
 class employeeDb {
+
     constructor(connection) {
         this.connection = connection;
     }
@@ -45,8 +46,8 @@ class employeeDb {
 
     //add department
     adDepartment(department) {
-        return this.connection.promise().query("INSERT INTO department SET ?");
+        return this.connection.promise().query("INSERT INTO department SET ?", department);
     }
 }
 
-module.exports = new employeeDb(connection);
+module.exports = new employeeDb(connect);
